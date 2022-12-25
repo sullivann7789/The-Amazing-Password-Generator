@@ -6,7 +6,11 @@ function createpassword () {
     var generate = Math.floor(Math.random() * uplttrs.length);
     var UCchoice = uplttrs[generate];
     var passgen1 = Math.floor(Math.random() * pass8index.length);
-    console.log(pass8index);
+
+    function uppercase(lttr) {
+    
+    console.log(UCchoice);
+    };
 
     var prompt = window.confirm("Would You Like A New Password?");
 
@@ -21,6 +25,9 @@ function createpassword () {
     }else{
 
         var pass1Choice = pass8index[passgen1];
+        console.log(pass1Choice);
+        pass8index[pass1Choice] = UCchoice;
+        console.log(pass8index);
 
     };
     var lwcsltrs = window.confirm("Would you like lowercase characters in your password?");
