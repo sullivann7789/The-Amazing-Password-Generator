@@ -2,9 +2,10 @@
 
 function createpassword () {
     var pass8index = [1, 2, 3, 4, 5, 6, 7, 8];
+    
     var uplttrs = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "X", "Y", "Z"];
-    var generate = Math.floor(Math.random() * uplttrs.length);
-    var UCchoice = uplttrs[generate];
+    var upgenerate = Math.floor(Math.random() * uplttrs.length);
+    var UCchoice = uplttrs[upgenerate];
     var passgen1 = Math.floor(Math.random() * pass8index.length);
 
     function uppercase(lttr) {
@@ -32,9 +33,20 @@ function createpassword () {
     };
     var lwcsltrs = window.confirm("Would you like lowercase characters in your password?");
 
+    var lclttrs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"];
+    var lcgenerate = Math.floor(Math.random() * lclttrs.length);
+    var lcchoice = lclttrs[lcgenerate];
+    var passgen2 = Math.floor(Math.random() * pass8index.length);
+
+
     if (!lwcsltrs) {
         window.alert("Quite Alright Then! Onto the Next!");
-    };
+    }else{
+        var pass2Choice = pass8index[passgen2];
+        console.log(pass2Choice);
+        pass8index[pass2Choice] = lcchoice;
+        console.log(pass8index);
+    }
 
     var spclchts = window.confirm("Would you like special characters in your password?");
 
