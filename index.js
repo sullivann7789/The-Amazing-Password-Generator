@@ -36,7 +36,18 @@ function createpassword () {
     var lclttrs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"];
     var lcgenerate = Math.floor(Math.random() * lclttrs.length);
     var lcchoice = lclttrs[lcgenerate];
+    console.log(lcchoice);
     var passgen2 = Math.floor(Math.random() * pass8index.length);
+    console.log(passgen2);
+
+    if (passgen2 == passgen1) {
+        if (passgen1 == 7) {
+            passgen2 == 3;
+        }
+        else {
+            passgen2 == (passgen1 + 1);
+        }
+    };
 
 
     if (!lwcsltrs) {
