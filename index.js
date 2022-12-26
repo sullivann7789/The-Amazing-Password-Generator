@@ -759,11 +759,15 @@ if (!prompt) {
         };
         };
     };
-
+password.join();
 };
 
+
 createpassword();
-console.log(password);
+
+
+window.alert("Your Password is! : \n" + password.join(""));
+console.log(password.join());
 
 
 
