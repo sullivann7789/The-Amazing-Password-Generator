@@ -1,5 +1,7 @@
 
+
 var password = [1,2,3,4,5,6,7,8,9];
+//make password user choice and then adapt functions to user input, use additems to pass as password length/string
 
 function createint(max) {
     return Math.floor(Math.random() * max);
@@ -7,9 +9,35 @@ function createint(max) {
 
 function createpassword() {
     var prompt = window.confirm("Would You Like A New Password?");
-if (!prompt) {
-    return;
-};
+
+    var countcharacter = window.prompt("How many characters would you like?");
+    function initresponse () {    
+        if (countcharacter == "8") {
+            alert("Pick a number that is greater than 8");
+            return; }
+        else if (countcharacter == "9"){
+           alert("Perfect, this is a manageable value");
+        }
+        else if (countcharacter > 9){
+            alert("Perfect, this is a manageable value");
+            function additemstopass(item) {
+               var passadd = Number(countcharacter);
+               var addvalue = passadd - password.length;
+               var addarray = addvalue + password.length;
+               for (var i = password.length; i < addarray; i++) {
+                password.push(i);
+               };              
+            };
+            additemstopass(password);
+            console.log(password);
+        }
+        else {
+            alert("please input a character 'Ex: 10': \n in numeric form above 8 \n and less than 128");
+            return;
+        };
+    
+        };
+    initresponse();
 
     var upcsltrs = window.confirm("Would you like uppercase characters in your password?");
 
