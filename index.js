@@ -17,6 +17,7 @@ function createpassword() {
             return; }
         else if (countcharacter == "9"){
            alert("Perfect, this is a manageable value");
+           userchoicecharacter();
         }
         else if (countcharacter > 9){
             alert("Perfect, this is a manageable value");
@@ -25,8 +26,13 @@ function createpassword() {
                var addvalue = passadd - password.length;
                var addarray = addvalue + password.length;
                for (var i = password.length; i < addarray; i++) {
+                userchoicecharacter();
+                randomassign(password[i]);
                 password.push(i);
-               };              
+               };
+               for (var i = 0; i < 30; i++) {
+                
+               }              
             };
             additemstopass(password);
             console.log(password);
@@ -38,7 +44,7 @@ function createpassword() {
     
         };
     initresponse();
-
+function userchoicecharacter() {
     var upcsltrs = window.confirm("Would you like uppercase characters in your password?");
 
     if (!upcsltrs) {
@@ -74,42 +80,9 @@ function createpassword() {
                                 rep1NMC();
                             };
                         };
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
+                        for (var i = 0; i < 30; i++) {
+                            randomassign(password[i]);
+                        };
                     
                         function repeat () {
                             if (password[0] === 0) {
@@ -142,42 +115,9 @@ function createpassword() {
                                 rep1SC();
                             };
                         };
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
+                        for (var i = 0; i < 30; i++) {
+                            randomassign(password[i]);
+                        };
                     
                         function repeat () {
                             if (password[0] === 0) {
@@ -208,44 +148,10 @@ function createpassword() {
                         (createint(1));
                         if (createint(1) == 0) {
                             rep1LC();
-                        }
-                        
-                    randomassign(password[1]);
-                    randomassign(password[2]);
-                    randomassign(password[3]);
-                    randomassign(password[4]);
-                    randomassign(password[5]);
-                    randomassign(password[6]);
-                    randomassign(password[7]);
-                    randomassign(password[8]);
-                    randomassign(password[0]);
-                    randomassign(password[1]);
-                    randomassign(password[2]);
-                    randomassign(password[3]);
-                    randomassign(password[4]);
-                    randomassign(password[5]);
-                    randomassign(password[6]);
-                    randomassign(password[7]);
-                    randomassign(password[8]);
-                    randomassign(password[0]);
-                    randomassign(password[1]);
-                    randomassign(password[2]);
-                    randomassign(password[3]);
-                    randomassign(password[4]);
-                    randomassign(password[5]);
-                    randomassign(password[6]);
-                    randomassign(password[7]);
-                    randomassign(password[8]);
-                    randomassign(password[0]);
-                    randomassign(password[1]);
-                    randomassign(password[2]);
-                    randomassign(password[3]);
-                    randomassign(password[4]);
-                    randomassign(password[5]);
-                    randomassign(password[6]);
-                    randomassign(password[7]);
-                    randomassign(password[8]);
-                    randomassign(password[0]);
+                        };
+                        for (var i = 0; i < 30; i++) {
+                            randomassign(password[i]);
+                        };
                 
                         function repeat () {
                         if (password[0] === 0) {
@@ -282,42 +188,9 @@ function createpassword() {
                         rep1NMC();
                     };
                 };
-                randomassign(password[1]);
-                randomassign(password[2]);
-                randomassign(password[3]);
-                randomassign(password[4]);
-                randomassign(password[5]);
-                randomassign(password[6]);
-                randomassign(password[7]);
-                randomassign(password[8]);
-                randomassign(password[0]);
-                randomassign(password[1]);
-                randomassign(password[2]);
-                randomassign(password[3]);
-                randomassign(password[4]);
-                randomassign(password[5]);
-                randomassign(password[6]);
-                randomassign(password[7]);
-                randomassign(password[8]);
-                randomassign(password[0]);
-                randomassign(password[1]);
-                randomassign(password[2]);
-                randomassign(password[3]);
-                randomassign(password[4]);
-                randomassign(password[5]);
-                randomassign(password[6]);
-                randomassign(password[7]);
-                randomassign(password[8]);
-                randomassign(password[0]);
-                randomassign(password[1]);
-                randomassign(password[2]);
-                randomassign(password[3]);
-                randomassign(password[4]);
-                randomassign(password[5]);
-                randomassign(password[6]);
-                randomassign(password[7]);
-                randomassign(password[8]);
-                randomassign(password[0]);
+                for (var i = 0; i < 30; i++) {
+                    randomassign(password[i]);
+                };
             
                 function repeat () {
                     if (password[0] === 0) {
@@ -360,42 +233,9 @@ function createpassword() {
                                 rep1UC();
                             };
                         };
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
+                        for (var i = 0; i < 30; i++) {
+                            randomassign(password[i]);
+                        };
                     
                         function repeat () {
                             if (password[0] === 0) {
@@ -427,43 +267,9 @@ function createpassword() {
                                 rep1NMC();
                             };
                         };
-
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
+                        for (var i = 0; i < 30; i++) {
+                            randomassign(password[i]);
+                        };
                     
                         function repeat () {
                             if (password[0] === 0) {
@@ -499,43 +305,10 @@ function createpassword() {
                             if (createint(2) == 1) {
                                 rep1SC();
                             };
+                        };                        
+                        for (var i = 0; i < 30; i++) {
+                            randomassign(password[i]);
                         };
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
-                        randomassign(password[1]);
-                        randomassign(password[2]);
-                        randomassign(password[3]);
-                        randomassign(password[4]);
-                        randomassign(password[5]);
-                        randomassign(password[6]);
-                        randomassign(password[7]);
-                        randomassign(password[8]);
-                        randomassign(password[0]);
                     
                         function repeat () {
                             if (password[0] === 0) {
@@ -566,45 +339,11 @@ function createpassword() {
                         (createint(1));
                         if (createint(1) == 0) {
                             rep1LC();
-                        }
-                        
-                    randomassign(password[1]);
-                    randomassign(password[2]);
-                    randomassign(password[3]);
-                    randomassign(password[4]);
-                    randomassign(password[5]);
-                    randomassign(password[6]);
-                    randomassign(password[7]);
-                    randomassign(password[8]);
-                    randomassign(password[0]);
-                    randomassign(password[1]);
-                    randomassign(password[2]);
-                    randomassign(password[3]);
-                    randomassign(password[4]);
-                    randomassign(password[5]);
-                    randomassign(password[6]);
-                    randomassign(password[7]);
-                    randomassign(password[8]);
-                    randomassign(password[0]);
-                    randomassign(password[1]);
-                    randomassign(password[2]);
-                    randomassign(password[3]);
-                    randomassign(password[4]);
-                    randomassign(password[5]);
-                    randomassign(password[6]);
-                    randomassign(password[7]);
-                    randomassign(password[8]);
-                    randomassign(password[0]);
-                    randomassign(password[1]);
-                    randomassign(password[2]);
-                    randomassign(password[3]);
-                    randomassign(password[4]);
-                    randomassign(password[5]);
-                    randomassign(password[6]);
-                    randomassign(password[7]);
-                    randomassign(password[8]);
-                    randomassign(password[0]);
-                
+                        };
+
+                        for (var i = 0; i < 30; i++) {
+                            randomassign(password[i]);
+                        };
                         function repeat () {
                         if (password[0] === 0) {
                             randomassign(password[0]);
@@ -640,42 +379,9 @@ function createpassword() {
                         rep1NMC();
                     };
                 };
-                    randomassign(password[1]);
-                    randomassign(password[2]);
-                    randomassign(password[3]);
-                    randomassign(password[4]);
-                    randomassign(password[5]);
-                    randomassign(password[6]);
-                    randomassign(password[7]);
-                    randomassign(password[8]);
-                    randomassign(password[0]);
-                    randomassign(password[1]);
-                    randomassign(password[2]);
-                    randomassign(password[3]);
-                    randomassign(password[4]);
-                    randomassign(password[5]);
-                    randomassign(password[6]);
-                    randomassign(password[7]);
-                    randomassign(password[8]);
-                    randomassign(password[0]);
-                    randomassign(password[1]);
-                    randomassign(password[2]);
-                    randomassign(password[3]);
-                    randomassign(password[4]);
-                    randomassign(password[5]);
-                    randomassign(password[6]);
-                    randomassign(password[7]);
-                    randomassign(password[8]);
-                    randomassign(password[0]);
-                    randomassign(password[1]);
-                    randomassign(password[2]);
-                    randomassign(password[3]);
-                    randomassign(password[4]);
-                    randomassign(password[5]);
-                    randomassign(password[6]);
-                    randomassign(password[7]);
-                    randomassign(password[8]);
-                    randomassign(password[0]);
+                for (var i = 0; i < 30; i++) {
+                    randomassign(password[i]);
+                };
                 
                     function repeat () {
                         if (password[0] === 0) {
@@ -739,42 +445,9 @@ function createpassword() {
             rep1NMC();
         };
         };
-        randomassign(password[1]);
-        randomassign(password[2]);
-        randomassign(password[3]);
-        randomassign(password[4]);
-        randomassign(password[5]);
-        randomassign(password[6]);
-        randomassign(password[7]);
-        randomassign(password[8]);
-        randomassign(password[0]);
-        randomassign(password[1]);
-        randomassign(password[2]);
-        randomassign(password[3]);
-        randomassign(password[4]);
-        randomassign(password[5]);
-        randomassign(password[6]);
-        randomassign(password[7]);
-        randomassign(password[8]);
-        randomassign(password[0]);
-        randomassign(password[1]);
-        randomassign(password[2]);
-        randomassign(password[3]);
-        randomassign(password[4]);
-        randomassign(password[5]);
-        randomassign(password[6]);
-        randomassign(password[7]);
-        randomassign(password[8]);
-        randomassign(password[0]);
-        randomassign(password[1]);
-        randomassign(password[2]);
-        randomassign(password[3]);
-        randomassign(password[4]);
-        randomassign(password[5]);
-        randomassign(password[6]);
-        randomassign(password[7]);
-        randomassign(password[8]);
-        randomassign(password[0]);
+        for (var i = 0; i < 30; i++) {
+            randomassign(password[i]);
+        };
 
         function repeat () {
             if (password[0] === 0) {
@@ -787,6 +460,7 @@ function createpassword() {
         };
         };
     };
+};
 password.join();
 };
 
