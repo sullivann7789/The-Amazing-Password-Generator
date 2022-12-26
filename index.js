@@ -17,7 +17,6 @@ function createpassword() {
             return; }
         else if (countcharacter == "9"){
            alert("Perfect, this is a manageable value");
-           userchoicecharacter();
         }
         else if (countcharacter > 9){
             alert("Perfect, this is a manageable value");
@@ -26,13 +25,8 @@ function createpassword() {
                var addvalue = passadd - password.length;
                var addarray = addvalue + password.length;
                for (var i = password.length; i < addarray; i++) {
-                userchoicecharacter();
-                randomassign(password[i]);
                 password.push(i);
-               };
-               for (var i = 0; i < 30; i++) {
-                
-               }              
+               };              
             };
             additemstopass(password);
             console.log(password);
@@ -44,7 +38,7 @@ function createpassword() {
     
         };
     initresponse();
-function userchoicecharacter() {
+
     var upcsltrs = window.confirm("Would you like uppercase characters in your password?");
 
     if (!upcsltrs) {
@@ -148,7 +142,8 @@ function userchoicecharacter() {
                         (createint(1));
                         if (createint(1) == 0) {
                             rep1LC();
-                        };
+                        }
+                        
                         for (var i = 0; i < 30; i++) {
                             randomassign(password[i]);
                         };
@@ -267,6 +262,7 @@ function userchoicecharacter() {
                                 rep1NMC();
                             };
                         };
+
                         for (var i = 0; i < 30; i++) {
                             randomassign(password[i]);
                         };
@@ -305,7 +301,7 @@ function userchoicecharacter() {
                             if (createint(2) == 1) {
                                 rep1SC();
                             };
-                        };                        
+                        };
                         for (var i = 0; i < 30; i++) {
                             randomassign(password[i]);
                         };
@@ -339,11 +335,12 @@ function userchoicecharacter() {
                         (createint(1));
                         if (createint(1) == 0) {
                             rep1LC();
-                        };
-
+                        }
+                        
                         for (var i = 0; i < 30; i++) {
                             randomassign(password[i]);
                         };
+                
                         function repeat () {
                         if (password[0] === 0) {
                             randomassign(password[0]);
@@ -460,7 +457,6 @@ function userchoicecharacter() {
         };
         };
     };
-};
 password.join();
 };
 
@@ -470,6 +466,8 @@ createpassword();
 
 window.alert("Your Password is! : \n" + password.join(""));
 console.log(password.join());
+
+
 
 
 
