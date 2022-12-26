@@ -1,77 +1,76 @@
 
+var password = [1,2,3,4,5,6,7,8,9];
 
-function createpassword () {
-    var pass8index = [1, 2, 3, 4, 5, 6, 7, 8];
+function createpassword() {
+    function rep1UC(x) {
+        var uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+        var alphkey = Math.floor(Math.random() * uppercase.length);
+        var x = uppercase[alphkey];
+        console.log(password);
+        };
     
-    var uplttrs = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "X", "Y", "Z"];
-    var upgenerate = Math.floor(Math.random() * uplttrs.length);
-    var UCchoice = uplttrs[upgenerate];
-    var passgen1 = Math.floor(Math.random() * pass8index.length);
-
-    function uppercase(lttr) {
+    function rep1LC(x) {
+        var lclttrs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"];
+        var lcgenerate = Math.floor(Math.random() * lclttrs.length);
+        var x = lclttrs[lcgenerate];
+        console.log(password);
+        };
     
-    console.log(UCchoice);
-    };
+    function rep1SC(x) {
+        var spcllttrs = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "=", "[", "]", "{", "}", "|", ";", ":", "'", "/", "?", "<",">",".",","];
+        var spclgenerate = Math.floor(Math.random() * spcllttrs.length);
+        var x = spcllttrs[spclgenerate];
+        console.log(password);
+        };
+    
+    function rep1NMC(x) {
+        var numbers = ["1","2","3","4","5","6","7","8","9","0"];
+        var nmbrgenerate = Math.floor(Math.random() * numbers.length);
+        var x = numbers[nmbrgenerate];
+        console.log(password);
+        };
 
-    var prompt = window.confirm("Would You Like A New Password?");
 
-    if (!prompt) {
-        return;
-    };
+    function createint(max) {
+        return Math.floor(Math.random()* max);
+    }; // assign function for each character possibility, and then assign each index a character based on integer outcome 0,1,2,3 
 
-    var upcsltrs = window.confirm("Would you like uppercase characters in your password?");
-
-    if (!upcsltrs) {
-        window.alert("No big deal! onto the next question!");
-    }else{
-
-        var pass1Choice = pass8index[passgen1];
-        console.log(pass1Choice);
-        pass8index[pass1Choice] = UCchoice;
-        console.log(pass8index);
-
-    };
-    var lwcsltrs = window.confirm("Would you like lowercase characters in your password?");
-
-    var lclttrs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"];
-    var lcgenerate = Math.floor(Math.random() * lclttrs.length);
-    var lcchoice = lclttrs[lcgenerate];
-    console.log(lcchoice);
-    var passgen2 = Math.floor(Math.random() * pass8index.length);
-    console.log(passgen2);
-
-    if (passgen2 == passgen1) {
-        if (passgen1 == 7) {
-            passgen2 == 3;
+    function randomassign(x) {
+        createint(4);
+        if (createint(4) == 0) {
+            rep1UC(x);
+        } 
+        else if (createint(4) == 1) {
+            rep1LC(x);
         }
-        else {
-            passgen2 == (passgen1 + 1);
+        else if (createint(4) == 2) {
+            rep1SC(x);
         }
+        else if (createint(4) == 3) {
+            rep1NMC(x);
+        };
     };
+    console.log(randomassign(password[0]));
+    console.log(createint(4));
 
+    randomassign(password[0]);
+    randomassign(password[1]);
+    randomassign(password[2]);
+    randomassign(password[3]);
+    randomassign(password[4]);
+    randomassign(password[5]);
+    randomassign(password[6]);
+    randomassign(password[7]);
+    randomassign(password[8]);
 
-    if (!lwcsltrs) {
-        window.alert("Quite Alright Then! Onto the Next!");
-    }else{
-        var pass2Choice = pass8index[passgen2];
-        console.log(pass2Choice);
-        pass8index[pass2Choice] = lcchoice;
-        console.log(pass8index);
-    }
+    console.log(password);
 
-    var spclchts = window.confirm("Would you like special characters in your password?");
-
-    if (!spclchts) {
-        window.alert("Great! Moving on to our final question!")
-    }
-    var numchts = window.confirm("Would you like numbers in your password?");
-    if (!numchts) {
-        window.alert("Generating Password Now, click when ready...")
-    }
-
-
-}
+};
 
 createpassword();
+console.log(password);
+
+
+
 
 
