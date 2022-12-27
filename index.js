@@ -6,6 +6,7 @@ var passlength = password.length;
 function createint(max) {
     return Math.floor(Math.random() * max);
 }
+console.log(createint(1));
 function createpassword() {
     var prompt = window.confirm("Would You Like A New Password?");
 
@@ -57,10 +58,10 @@ function createpassword() {
                     return;
                     }else{
 
-                        function rep1NMC() {
+                        function rep1NMC(nmcvalue) {
                             var numbers = ["1","2","3","4","5","6","7","8","9","0"];
                             var nmbrgenerate = Math.floor(Math.random() * numbers.length);
-                            password[createint(passlength)] = numbers[nmbrgenerate];
+                            password[nmcvalue] = numbers[nmbrgenerate];
                             console.log(password);
                             };
                     
@@ -68,14 +69,14 @@ function createpassword() {
                     
                         // assign function for each character possibility, and then assign each index a character based on integer outcome 0,1,2,3 
 
-                        function randomassign() {
-                            (createint(1));
-                            if (createint(1) == 0) {
-                                rep1NMC();
+                        function randomassign(a) {
+                            var dice = createint(1);
+                            if (dice === 0) {
+                                rep1NMC(a);
                             };
                         };
                         for (var i = 0; i < passlength; i++) {
-                            randomassign(password[i]);
+                            randomassign(i);
                         };
                     
                         function repeat () {
@@ -92,10 +93,10 @@ function createpassword() {
                     var numchts = window.confirm("Would you like numbers in your password?");
                     if (!numchts) {
             
-                        function rep1SC() {
+                        function rep1SC(scvalue) {
                             var spcllttrs = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "=", "[", "]", "{", "}", "|", ";", ":", "'", "/", "?", "<",">",".",","];
                             var spclgenerate = Math.floor(Math.random() * spcllttrs.length);
-                            password[createint(passlength)] = spcllttrs[spclgenerate];
+                            password[scvalue] = spcllttrs[spclgenerate];
                             console.log(password);
                             };
                     
@@ -103,14 +104,14 @@ function createpassword() {
                     
                         // assign function for each character possibility, and then assign each index a character based on integer outcome 0,1,2,3 
                     
-                        function randomassign() {
-                            (createint(1));
-                            if (createint(1) == 0) {
-                                rep1SC();
+                        function randomassign(a) {
+                            var dice = createint(1);
+                            if (dice === 0) {
+                                rep1SC(a);
                             };
                         };
                         for (var i = 0; i < passlength; i++) {
-                            randomassign(password[i]);
+                            randomassign(i);
                         };
                     
                         function repeat () {
@@ -122,17 +123,17 @@ function createpassword() {
                     
                         console.log(password);
                     }else{
-                        function rep1NMC() {
+                        function rep1NMC(nmcvalue) {
                             var numbers = ["1","2","3","4","5","6","7","8","9","0"];
                             var nmbrgenerate = Math.floor(Math.random() * numbers.length);
-                            password[createint(passlength)] = numbers[nmbrgenerate];
+                            password[nmcvalue] = numbers[nmbrgenerate];
                             console.log(password);
                             };
 
-                        function rep1SC() {
+                        function rep1SC(scvalue) {
                             var spcllttrs = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "=", "[", "]", "{", "}", "|", ";", ":", "'", "/", "?", "<",">",".",","];
                             var spclgenerate = Math.floor(Math.random() * spcllttrs.length);
-                            password[createint(passlength)] = spcllttrs[spclgenerate];
+                            password[scvalue] = spcllttrs[spclgenerate];
                             console.log(password);
                             };
                     
@@ -140,17 +141,17 @@ function createpassword() {
                     
                         // assign function for each character possibility, and then assign each index a character based on integer outcome 0,1,2,3 
                     
-                        function randomassign() {
-                            (createint(2));
-                            if (createint(2) == 0) {
-                                rep1NMC();
+                        function randomassign(a) {
+                            var dice = createint(2);
+                            if (dice === 0) {
+                                rep1SC(a);
                             }
-                            else if (createint(2) == 1) {
-                                rep1SC();
+                            else if (dice === 1) {
+                                rep1NMC(a);
                             };
                         };
                         for (var i = 0; i < passlength; i++) {
-                            randomassign(password[i]);
+                            randomassign(i);
                         };
 
                     }
@@ -159,10 +160,10 @@ function createpassword() {
         }else{
             
 
-            function rep1LC() {
+            function rep1LC(lcvalue) {
                 var lclttrs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"];
                 var lcgenerate = Math.floor(Math.random() * lclttrs.length);
-                password[createint(passlength)] = lclttrs[lcgenerate];
+                password[lcvalue] = lclttrs[lcgenerate];
                 console.log(password);
                 };
 
@@ -171,14 +172,15 @@ function createpassword() {
             
             if (!spclchts) {
                 var numchts = window.confirm("Would you like numbers in your password?");
-                if (!numchts) { function randomassign() {
-                        (createint(1));
-                        if (createint(1) == 0) {
-                            rep1LC();
-                        }
+                if (!numchts) {
+                    function randomassign(a) {
+                        var dice = createint(1);
+                        if (dice === 0) {
+                            rep1LC(a);
+                        };
                         
                         for (var i = 0; i < passlength; i++) {
-                            randomassign(password[i]);
+                            randomassign(i);
                         };
                 
                         function repeat () {
@@ -196,28 +198,28 @@ function createpassword() {
                     window.alert("Generating Password Now, click when ready...")
 
         
-                function rep1NMC() {
-                    var numbers = ["1","2","3","4","5","6","7","8","9","0"];
-                    var nmbrgenerate = Math.floor(Math.random() * numbers.length);
-                    password[createint(passlength)] = numbers[nmbrgenerate];
-                    console.log(password);
-                    };
+                    function rep1NMC(nmcvalue) {
+                        var numbers = ["1","2","3","4","5","6","7","8","9","0"];
+                        var nmbrgenerate = Math.floor(Math.random() * numbers.length);
+                        password[nmcvalue] = numbers[nmbrgenerate];
+                        console.log(password);
+                        };
         
         
         
                 // assign function for each character possibility, and then assign each index a character based on integer outcome 0,1,2,3 
         
-                function randomassign() {
-                    (createint(2));
-                    if (createint(2) == 0) {
-                        rep1LC();
+                function randomassign(a) {
+                    var dice = createint(2);
+                    if (dice === 1) {
+                        rep1LC(a);
                     }
-                    else if (createint(2) == 1) {
-                        rep1NMC();
+                    else if (dice === 0) {
+                        rep1NMC(a);
                     };
-                };
+                    };
                 for (var i = 0; i < passlength; i++) {
-                    randomassign(password[i]);
+                    randomassign(i);
                 };
             
                 function repeat () {
@@ -233,33 +235,33 @@ function createpassword() {
             
                 };
             }else{
-                function rep1SC() {
+                function rep1SC(scvalue) {
                     var spcllttrs = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "=", "[", "]", "{", "}", "|", ";", ":", "'", "/", "?", "<",">",".",","];
                     var spclgenerate = Math.floor(Math.random() * spcllttrs.length);
-                    password[createint(passlength)] = spcllttrs[spclgenerate];
+                    password[scvalue] = spcllttrs[spclgenerate];
                     console.log(password);
                     };
 
-                function randomassign() {
-                    (createint(2));
-                    if (createint(2) == 0) {
-                        rep1LC();
-                    }
-                    else if (createint(2) == 1) {
-                        rep1SC();
+                    function randomassign(a) {
+                        var dice = createint(2);
+                        if (dice === 0) {
+                            rep1LC(a);
+                        }
+                        else if (dice === 1) {
+                            rep1SC(a);
+                        }
                     };
-                };
                 for (var i = 0; i < passlength; i++) {
-                    randomassign(password[i]);
+                    randomassign(i);
                 };
-            }
-        }
+            };
+        };
     
     }else{
-        function rep1UC() {
+        function rep1UC(ucvalue) {
             var uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
             var alphkey = Math.floor(Math.random() * uppercase.length);
-            password[createint(passlength)] = uppercase[alphkey];
+            password[ucvalue] = uppercase[alphkey];
             console.log(password);
             };
 
@@ -274,14 +276,14 @@ function createpassword() {
                     window.alert("Great! Moving on to our final question!");
                     var numchts = window.confirm("Would you like numbers in your password?");
                     if (!numchts) {
-                        function randomassign() {
-                            (createint(1));
-                            if (createint(1) == 0) {
-                                rep1UC();
+                        function randomassign(a) {
+                            var dice = createint(1);
+                            if (dice === 0) {
+                                rep1UC(a);
                             };
                         };
                         for (var i = 0; i < passlength; i++) {
-                            randomassign(password[i]);
+                            randomassign(i);
                         };
                     
                         function repeat () {
@@ -295,10 +297,10 @@ function createpassword() {
                     }else{
 
 
-                        function rep1NMC() {
+                        function rep1NMC(nmcvalue) {
                             var numbers = ["1","2","3","4","5","6","7","8","9","0"];
                             var nmbrgenerate = Math.floor(Math.random() * numbers.length);
-                            password[createint(passlength)] = numbers[nmbrgenerate];
+                            password[nmcvalue] = numbers[nmbrgenerate];
                             console.log(password);
                             };
                     
@@ -306,18 +308,18 @@ function createpassword() {
                     
                         // assign function for each character possibility, and then assign each index a character based on integer outcome 0,1,2,3 
                     
-                        function randomassign() {
-                            (createint(2));
-                            if (createint(2) == 0) {
-                                rep1UC();
+                        function randomassign(a) {
+                            var dice = createint(2);
+                            if (dice === 0) {
+                                rep1UC(a);
                             }
-                            else if (createint(2) == 1) {
-                                rep1NMC();
+                            else if (dice === 1) {
+                                rep1NMC(a);
                             };
                         };
 
                         for (var i = 0; i < passlength; i++) {
-                            randomassign(password[i]);
+                            randomassign(i);
                         };
                         console.log(password[createint(9)]);
                     
@@ -328,10 +330,10 @@ function createpassword() {
                     var numchts = window.confirm("Would you like numbers in your password?");
                     if (!numchts) {
             
-                        function rep1SC() {
+                        function rep1SC(scvalue) {
                             var spcllttrs = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "=", "[", "]", "{", "}", "|", ";", ":", "'", "/", "?", "<",">",".",","];
                             var spclgenerate = Math.floor(Math.random() * spcllttrs.length);
-                            password[createint(passlength)] = spcllttrs[spclgenerate];
+                            password[scvalue] = spcllttrs[spclgenerate];
                             console.log(password);
                             };
                     
@@ -339,18 +341,18 @@ function createpassword() {
                     
                         // assign function for each character possibility, and then assign each index a character based on integer outcome 0,1,2,3 
                     
-                        function randomassign() {
-                            (createint(2));
-                            if (createint(2) == 0) {
-                                rep1UC();
-                            }
-                            (createint(2));
-                            if (createint(2) == 1) {
-                                rep1SC();
+                        function randomassign(a) {
+                            var dice = createint(2);
+                            if (dice === 0) {
+                                rep1UC(a);
+                            } 
+                            else if (dice === 1) {
+                                rep1SC(a);
                             };
+                            
                         };
                         for (var i = 0; i < passlength; i++) {
-                            randomassign(password[i]);
+                            randomassign(i);
                         };
                     
                         function repeat () {
@@ -366,10 +368,10 @@ function createpassword() {
         }else{
             
 
-            function rep1LC() {
+            function rep1LC(lcvalue) {
                 var lclttrs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"];
                 var lcgenerate = Math.floor(Math.random() * lclttrs.length);
-                password[createint(passlength)] = lclttrs[lcgenerate];
+                password[lcvalue] = lclttrs[lcgenerate];
                 console.log(password);
                 };
 
@@ -378,16 +380,18 @@ function createpassword() {
             
             if (!spclchts) {
                 var numchts = window.confirm("Would you like numbers in your password?");
-                if (!numchts) { function randomassign() {
-                        (createint(2));
-                        if (createint(2) == 0) {
-                            rep1LC();
-                        } else if (createint(2) == 1) {
-                            rep1UC();
+                if (!numchts) {
+                    function randomassign(a) {
+                        var dice = createint(2);
+                        if (dice === 0) {
+                            rep1UC(a);
+                        } 
+                        else if (dice === 1) {
+                            rep1LC(a);
                         };
                     };
                     for (var i = 0; i < passlength; i++) {
-                        randomassign(password[i]);
+                        randomassign(i);
                     };
 
                     
@@ -400,29 +404,29 @@ function createpassword() {
                     window.alert("Generating Password Now, click when ready...")
 
         
-                function rep1NMC() {
-                    var numbers = ["1","2","3","4","5","6","7","8","9","0"];
-                    var nmbrgenerate = Math.floor(Math.random() * numbers.length);
-                    password[createint(passlength)] = numbers[nmbrgenerate];
-                    console.log(password);
-                    };
+                    function rep1NMC(nmcvalue) {
+                        var numbers = ["1","2","3","4","5","6","7","8","9","0"];
+                        var nmbrgenerate = Math.floor(Math.random() * numbers.length);
+                        password[nmcvalue] = numbers[nmbrgenerate];
+                        console.log(password);
+                        };
         
         
         
                     // assign function for each character possibility, and then assign each index a character based on integer outcome 0,1,2,3 
         
-                function randomassign() {
-                    (createint(2));
-                    if (createint(2) == 0) {
-                        rep1LC();
-                    }
-                    else if (createint(2) == 1) {
-                        rep1NMC();
-                    };
-                };
-                for (var i = 0; i < passlength; i++) {
-                    randomassign(password[i]);
-                };
+                    function randomassign(a) {
+                        var dice = createint(2);
+                        if (dice === 0) {
+                            rep1LC(a);
+                        }
+                        else if (dice === 1) {
+                            rep1NMC(a);
+                        };
+                        };
+                    for (var i = 0; i < passlength; i++) {
+                            randomassign(i);
+                        };
                 
                     function repeat () {
                         if (password[0] === 0) {
