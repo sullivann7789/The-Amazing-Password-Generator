@@ -1,0 +1,10 @@
+* {
+    font-style: Arial;
+    text-align: center;
+    list-style-type: none;
+}
+
+main ul li {
+    font-style: Arial;
+    margin: 50px;
+}
