@@ -262,22 +262,6 @@ function createpassword() {
                     };
                 }else{
 
-
-
-                function rep1NMC(nmcvalue) {
-                    var numbers = ["1","2","3","4","5","6","7","8","9","0"];
-                    var nmbrgenerate = Math.floor(Math.random() * numbers.length);
-                    password[nmcvalue] = numbers[nmbrgenerate];
-                    console.log(password);
-                    };
-
-                function rep1SC(scvalue) {
-                    var spcllttrs = ["`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "=", "[", "]", "{", "}", "|", ";", ":", "'", "/", "?", "<",">",".",","];
-                    var spclgenerate = Math.floor(Math.random() * spcllttrs.length);
-                    password[scvalue] = spcllttrs[spclgenerate];
-                    console.log(password);
-                    };
-
                     function randomassign(a) {
                         var dice = createint(3);
                         if (dice === 0) {
