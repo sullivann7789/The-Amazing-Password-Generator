@@ -580,9 +580,9 @@ function generatepassword() {
                 };
             };
         };
-password = password.join("");
-    };
 
+    };
+    password = password.join("");
     window.alert("Your Password is! : \n" + password);
     console.log(password);
 };
@@ -590,6 +590,7 @@ password = password.join("");
 var generateBtn = document.querySelector("#generate");
 
 function writePassword() {
+    password = [1,2,3,4,5,6,7,8,9];
     generatepassword();
     document.getElementById("text").innerHTML = password;
 }
