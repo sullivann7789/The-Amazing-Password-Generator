@@ -255,12 +255,10 @@ function generatepassword() {
                         else if (dice === 1) {
                             rep1SC(a);
                         };
-                        
+                    };
                         for (var i = 0; i < passlength; i++) {
                             randomassign(i);
                         };
-                
-                    };
                 }else{
 
                     function rep1NMC(nmcvalue) {
