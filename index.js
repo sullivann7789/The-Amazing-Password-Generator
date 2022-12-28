@@ -2,14 +2,14 @@
 
 var password = [1,2,3,4,5,6,7,8,9];
 //make password user choice and then adapt functions to user input, use additems to pass as password length/string
-var passlength = password.length;
-function createint(max) {
-    return Math.floor(Math.random() * max);
-}
-console.log(createint(1));
-function createpassword() {
-    var prompt = window.confirm("Would You Like A New Password?");
+function generatepassword() {
 
+    
+    var prompt = window.confirm("Would You Like A New Password?");
+    var passlength = password.length;
+    function createint(max) {
+        return Math.floor(Math.random() * max);
+    }
     
     function initresponse () { 
         var countcharacter = window.prompt("How many characters would you like?");   
@@ -580,16 +580,22 @@ function createpassword() {
                 };
             };
         };
-password.join("");
+password = password.join("");
     };
+
+    window.alert("Your Password is! : \n" + password);
+    console.log(password);
 };
 
+var generateBtn = document.querySelector("#generate");
 
-createpassword();
+function writePassword() {
+    generatepassword();
+    document.getElementById("text").innerHTML = password;
+}
 
-
-window.alert("Your Password is! : \n" + password.join(""));
-console.log(password.join());
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 
 
