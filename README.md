@@ -20,3 +20,6 @@ to making the Generator's function possible.
 
 ## As seen below, after clicking Generate Password, the user can generate a password of their preference.
 ![image](https://user-images.githubusercontent.com/119015927/209906100-25998740-b6cf-4f25-864b-154259a25011.png)
+
+## The Website is available through the following link:
+https://sullivann7789.github.io/The-Amazing-Password-Generator/
