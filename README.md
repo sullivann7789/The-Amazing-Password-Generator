@@ -6,7 +6,7 @@ and special characters).
 This allows the user to have a completely encrypted password, providing a higher level of 
 security than the standard method of password creation.
 
-##How it was Created
+## How it was Created
 By using javascript, I was able to create this Generator. 
 Specifically, I implemented the following key methods:
 - For iterations
