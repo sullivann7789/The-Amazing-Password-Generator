@@ -219,7 +219,7 @@ function generatepassword() {
                     else if (dice === 0) {
                         rep1NMC(a);
                     };
-                    };
+                };
                 for (var i = 0; i < passlength; i++) {
                     randomassign(i);
                 };
