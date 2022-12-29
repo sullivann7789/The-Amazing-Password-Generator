@@ -1,4 +1,4 @@
-# The-Amazing-Password-Generator
+# The Amazing Password Generator
 This is a project where any individual can input a character count, and generate a password
 of that length, with whatever type of character they choose (number, uppercase, lowercase, 
 and special characters).
