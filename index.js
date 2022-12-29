@@ -88,7 +88,7 @@ function generatepassword() {
                     window.alert(" W#$F%$@K!!!! What do you want then!!! ")
                     return;
                     }else{
-                    
+                        window.alert("Generating Password Now, click when ready...")
                         // assign function for each character possibility, and then assign each index a character based on integer outcome 0,1,2,3 
 
                         function randomassign(a) {
@@ -108,7 +108,7 @@ function generatepassword() {
                     window.alert("Great! Moving on to our final question!");
                     var numchts = window.confirm("Would you like numbers in your password?");
                     if (!numchts) {
-                    
+                        window.alert("Generating Password Now, click when ready...")
                         // assign function for each character possibility, and then assign each index a character based on integer outcome 0,1,2,3 
                     
                         function randomassign(a) {
@@ -125,7 +125,7 @@ function generatepassword() {
                     
                         console.log(password);
                     }else{
-                    
+                        window.alert("Generating Password Now, click when ready...")
                     
                         // assign function for each character possibility, and then assign each index a character based on integer outcome 0,1,2,3 
                     
@@ -172,30 +172,32 @@ function generatepassword() {
         
         
         
-                // assign function for each character possibility, and then assign each index a character based on integer outcome 0,1,2,3 
+                    // assign function for each character possibility, and then assign each index a character based on integer outcome 0,1,2,3 
         
-                function randomassign(a) {
-                    var dice = createint(1);
-                    if (dice === 1) {
-                        rep1LC(a);
-                    }
-                    else if (dice === 0) {
-                        rep1NMC(a);
+                    function randomassign(a) {
+                        var dice = createint(1);
+                        if (dice === 1) {
+                            rep1LC(a);
+                        }
+                        else if (dice === 0) {
+                            rep1NMC(a);
+                        };
                     };
-                };
-                for (var i = 0; i < passlength; i++) {
-                    randomassign(i);
-                };
-                console.log(password[createint(9)]);
+                    for (var i = 0; i < passlength; i++) {
+                        randomassign(i);
+                    };
+                    console.log(password[createint(9)]);
             
-                console.log(password);
+                    console.log(password);
             
 
             
-                };
+                    };
             }else{
                 var numchts = window.confirm("Would you like numbers in your password?");
                 if (!numchts) {
+                    window.alert("Generating Password Now, click when ready...");
+
                     function randomassign(a) {
                         var dice = createint(2);
                         if (dice === 0) {
@@ -209,7 +211,7 @@ function generatepassword() {
                             randomassign(i);
                         };
                 }else{
-
+                    
                     function randomassign(a) {
                         var dice = createint(3);
                         if (dice === 0) {
@@ -246,6 +248,8 @@ function generatepassword() {
                     window.alert("Great! Moving on to our final question!");
                     var numchts = window.confirm("Would you like numbers in your password?");
                     if (!numchts) {
+                        window.alert("Generating Password Now, click when ready...");
+
                         function randomassign(a) {
                             var dice = createint(1);
                             if (dice === 0) {
@@ -262,7 +266,8 @@ function generatepassword() {
                     }else{
                     
                         // assign function for each character possibility, and then assign each index a character based on integer outcome 0,1,2,3 
-                    
+                        window.alert("Generating Password Now, click when ready...");
+
                         function randomassign(a) {
                             var dice = createint(2);
                             if (dice === 0) {
@@ -284,7 +289,9 @@ function generatepassword() {
                     window.alert("Great! Moving on to our final question!");
                     var numchts = window.confirm("Would you like numbers in your password?");
                     if (!numchts) {
-                    
+
+                        window.alert("Generating Password Now, click when ready...");
+
                         // assign function for each character possibility, and then assign each index a character based on integer outcome 0,1,2,3 
                     
                         function randomassign(a) {
@@ -305,6 +312,8 @@ function generatepassword() {
                     
                         console.log(password);
                     }else{
+                        
+                        window.alert("Generating Password Now, click when ready...");
 
                         function randomassign(a) {
                             var dice = createint(3);
